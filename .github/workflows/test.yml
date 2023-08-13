@@ -18,3 +18,20 @@ jobs:
       
       - name: run unit test
         run: npm run test
+  build:
+    needs: unit-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v2
+      
+      - name: install node js@18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      
+      - name: install dependencies
+        run: npm ci
+      
+      - name: build
+        run: npm run build
