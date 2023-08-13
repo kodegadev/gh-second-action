@@ -60,4 +60,4 @@ jobs:
             package.json
           
       - name: deploy
-        run: npm run deploy
+        run: echo "deploying the code"
