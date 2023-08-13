@@ -1,7 +1,8 @@
 name: output the github context information
 on:
-  - push
-  - workflow_dispatch
+  push:
+      branches:
+      - main
 jobs:
   log-info:
     runs-on: ubuntu-latest
