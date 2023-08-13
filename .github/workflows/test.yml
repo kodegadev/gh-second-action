@@ -1,6 +1,7 @@
 name: run-unit-test
 on: 
-  push
+  - push
+  - workflow_dispatch
 jobs:
   unit-test:
     runs-on: ubuntu-latest
